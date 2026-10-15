@@ -1,0 +1,41 @@
+
+# Python virtual environments
+yolo_env/
+yolov8_env/
+.venv/
+venv/
+
+# YOLO datasets
+dataset/
+
+# Trained models and exported models
+*.pt
+*.onnx
+*.engine
+*.torchscript
+*.tflite
+*.pb
+*.mlmodel
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
+
+# Training outputs
+runs/
+wandb/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,10 @@
+path: /home/willian/Projetos/YoloProject/dataset
+
+train: /home/willian/Projetos/YoloProject/dataset/images/train
+val: /home/willian/Projetos/YoloProject/dataset/images/val
+
+names:
+  0: Alojamento
+  1: Conector Circular
+  2: Circuito Integrado
+  3: Chaves e Botao
