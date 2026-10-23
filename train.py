@@ -5,8 +5,8 @@ BASE_DIR = Path(__file__).resolve().parent
 
 
 def main():
-    # Modelo YOLOv8 Nano pré-treinado
-    model = YOLO("yolov8n.pt")
+
+    model = YOLO("yolo11m.pt")
 
     model.train(
     data=str(BASE_DIR / "data.yaml"),
@@ -15,7 +15,7 @@ def main():
     imgsz=640,
     batch=16,
 
-    name="cabo_p10",
+    name="yolo11m",
 
     workers=8,
     device=0,
