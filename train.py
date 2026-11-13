@@ -3,19 +3,18 @@ from ultralytics import YOLO
 
 BASE_DIR = Path(__file__).resolve().parent
 
-
 def main():
 
-    model = YOLO("yolo11m.pt")
+    model = YOLO("yolov10s.pt")
 
     model.train(
     data=str(BASE_DIR / "data.yaml"),
 
-    epochs=200,
+    epochs=100,
     imgsz=640,
     batch=16,
 
-    name="yolo11m",
+    name="yolov10s",
 
     workers=8,
     device=0,
@@ -31,7 +30,6 @@ def main():
 
     patience=30,
 )
-
 
 if __name__ == "__main__":
     main()

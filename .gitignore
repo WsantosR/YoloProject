@@ -16,6 +16,8 @@ dataset/
 *.tflite
 *.pb
 *.mlmodel
+
+# Images
 *.png
 *.jpg
 *.jpeg
@@ -39,3 +41,6 @@ __pycache__/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Miscellaneous files
+*.csv

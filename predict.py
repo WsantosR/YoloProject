@@ -7,21 +7,20 @@ import torch
 from ultralytics import YOLO
 
 
-# =========================
-# CONFIGURAÇÕES
-# =========================
+model_name = "yolo11m"
 
 PROJECT_DIR = Path.home() / "Projetos" / "YoloProject"
 
 MODEL_PATH = (
-    PROJECT_DIR / "runs" / "detect" / "yolo"
+    PROJECT_DIR / "runs" / "detect" / model_name
     / "weights" / "best.pt"
 )
 
 IMAGES_DIR = PROJECT_DIR / "dataset" / "images" / "test"
 LABELS_DIR = PROJECT_DIR / "dataset" / "labels" / "test"
 
-CSV_PATH = PROJECT_DIR / "resultado_teste.csv"
+file = model_name + "_resultado_teste.csv"
+CSV_PATH = PROJECT_DIR / file
 
 CONFIDENCE = 0.25
 DEVICE = 0 if torch.cuda.is_available() else "cpu"
@@ -29,11 +28,6 @@ DEVICE = 0 if torch.cuda.is_available() else "cpu"
 IMAGE_EXTENSIONS = {
     ".jpg", ".jpeg", ".png", ".bmp", ".webp", ".tif", ".tiff"
 }
-
-
-# =========================
-# FUNÇÕES AUXILIARES
-# =========================
 
 def contar_labels(label_path, num_classes):
     """Conta as instâncias de cada classe no arquivo YOLO."""
